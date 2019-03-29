@@ -1,0 +1,45 @@
+{
+    "name": "@data-forge-plot/chart-def",
+    "version": "1.0.1",
+    "description": "Defines the interface between Data-Forge Plot and chart renderer plugins.",
+    "main": "build/index.js",
+    "types": "build/index.d.ts",
+    "scripts": {
+        "start": "node ./build/index.js",
+        "start:dev": "nodemon",
+        "clean": "rm -rf build/*",
+        "build": "tsc",
+        "clean-build": "npm run clean && npm run build",
+        "build:watch": "tsc --watch",
+        "clean-build:watch": "npm run clean && npm run build:watch",
+        "prepublishOnly": "npm test && npm run build",
+        "lint": "tslint -c tslint.json 'src/**/*.{ts,tsx}'",
+        "pretest": "npm run lint",
+        "test": "jest",
+        "test:watch": "jest --watch"
+    },
+    "repository": {
+        "type": "git",
+        "url": "git+https://github.com/data-forge/data-forge-plot-chart-def.git"
+    },
+    "keywords": [],
+    "author": "ashley@codecapers.com.au",
+    "license": "MIT",
+    "bugs": {
+        "url": "https://github.com/data-forge/data-forge-plot-chart-def/issues"
+    },
+    "homepage": "https://github.com/data-forge/data-forge-plot-chart-def#readme",
+    "dependencies": {
+        "@data-forge/serialization": "^1.0.0"
+    },
+    "devDependencies": {
+        "@types/jest": "^24.0.6",
+        "@types/node": "10.11.4",
+        "jest": "^24.1.0",
+        "source-map-support": "0.5.9",
+        "ts-jest": "^23.10.5",
+        "ts-node": "7.0.1",
+        "tslint": "^5.12.1",
+        "typescript": "^3.1.1"
+    }
+}
