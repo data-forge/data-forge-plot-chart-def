@@ -9,6 +9,14 @@ export enum ChartType {
     Bar = "bar",
     Scatter = "scatter",
     Area = "area",
+    Histograph = "histogram",
+    Pie = "pie",
+    Donut = "donut",
+    RadialBar = "radialBar",
+    Bubble = "bubble",
+    Heatmap = "heatmap",
+    Candlestick = "candlestick",
+    Radar = "radar",
 }
 
 /**
