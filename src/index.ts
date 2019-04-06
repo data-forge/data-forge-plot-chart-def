@@ -61,7 +61,7 @@ export interface IAxisLabelConfig {
     /**
      * The text for the label.
      */
-    text: string;
+    text?: string;
 
     /**
      * Position of the label.
@@ -120,14 +120,14 @@ export interface IAxisConfig {
     /**
      * Label for the axis.
      */
-    label: IAxisLabelConfig;
+    label?: IAxisLabelConfig;
 }
 
 /**
  * Configures a Y axis of the chart.
  */
 export interface IYAxisConfig extends IAxisConfig {
-    
+
     /**
      * The minimum value to render on the axis.
      */
