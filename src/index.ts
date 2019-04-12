@@ -199,7 +199,7 @@ export interface IAxisMap {
     /**
      * The default x axis for the chart.
      */
-    x: ISingleAxisMap;
+    x?: ISingleAxisMap;
 
     /**
      * The y axis for the chart.
