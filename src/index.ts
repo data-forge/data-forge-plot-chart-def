@@ -72,7 +72,7 @@ export interface IAxisLabelConfig {
 /**
  * Relates a single axis to data series.
  */
-export interface ISingleAxisMap {
+export interface IAxisSeriesConfig {
 
     /**
      * The name of the series to render on the axis.
@@ -98,12 +98,12 @@ export interface ISingleAxisMap {
 /**
  * Relates a single Y axis to data series.
  */
-export interface ISingleYAxisMap extends ISingleAxisMap {
+export interface IYAxisSeriesConfig extends IAxisSeriesConfig {
 
     /**
      * Configure a separate X axis for the y axis.
      */
-    x?: ISingleAxisMap;
+    x?: IAxisSeriesConfig;
 }
 
 /**
@@ -199,17 +199,17 @@ export interface IAxisMap {
     /**
      * The default x axis for the chart.
      */
-    x?: ISingleAxisMap;
+    x?: IAxisSeriesConfig;
 
     /**
      * The y axis for the chart.
      */
-    y: ISingleYAxisMap[];
+    y: IYAxisSeriesConfig[];
 
     /**
      * The optional  second y axis for the chart.
      */
-    y2: ISingleYAxisMap[];
+    y2: IYAxisSeriesConfig[];
 }
 
 /**
