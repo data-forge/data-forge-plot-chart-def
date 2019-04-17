@@ -115,7 +115,7 @@ export interface IAxisConfig {
      * Sets the type of the axis' data.
      * Default: AxisType.Indexed ("indexed")
      */
-    axisType: AxisType;
+    axisType?: AxisType;
 
     /**
      * Label for the axis.
