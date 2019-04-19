@@ -158,37 +158,39 @@ export interface IPlotConfig {
     /**
      * The type of chart to render.
      */
-    chartType: ChartType;
+    chartType?: ChartType;
 
     /**
      * Width of the plot.
+     * eg 100px, 100%, 100, etc
      */
-    width: number;
+    width?: string;
 
     /**
      * Height of the plot.
+     * eg 100px, 100%, 100, etc
      */
-    height: number;
+    height?: string;
 
     /**
      * Configuration for the x axis.
      */
-    x: IAxisConfig;
+    x?: IAxisConfig;
 
     /**
      * Configuration for the y axis.
      */
-    y: IYAxisConfig;
+    y?: IYAxisConfig;
 
     /**
      * Configuration for the second y axis.
      */
-    y2: IYAxisConfig;
+    y2?: IYAxisConfig;
 
     /**
      * Configure the chart's legend.
      */
-    legend: ILegendConfig;
+    legend?: ILegendConfig;
 }
 
 /**
