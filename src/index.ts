@@ -164,13 +164,13 @@ export interface IPlotConfig {
      * Width of the plot.
      * eg 100px, 100%, 100, etc
      */
-    width?: string;
+    width?: number | string;
 
     /**
      * Height of the plot.
      * eg 100px, 100%, 100, etc
      */
-    height?: string;
+    height?: number | string;
 
     /**
      * Configuration for the x axis.
