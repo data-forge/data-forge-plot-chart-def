@@ -119,7 +119,7 @@ export interface IAxisConfig {
 /**
  * Configures the X axis of the chart.
  */
-export interface IXAxisConfig {
+export interface IXAxisConfig extends IAxisConfig {
 
     /**
      * Sets the type of the axis' data.
