@@ -23,8 +23,7 @@ export enum ChartType {
  * Defines the type of an axis.
  */
 export enum AxisType {
-    Default =  "default",
-    Indexed = "indexed",
+    Numerical = "numerical",
     Timeseries = "timeseries",
     Category = "category",
 }
@@ -112,15 +111,20 @@ export interface IYAxisSeriesConfig extends IAxisSeriesConfig {
 export interface IAxisConfig {
 
     /**
-     * Sets the type of the axis' data.
-     * Default: AxisType.Indexed ("indexed")
-     */
-    axisType?: AxisType;
-
-    /**
      * Label for the axis.
      */
     label?: IAxisLabelConfig;
+}
+
+/**
+ * Configures the X axis of the chart.
+ */
+export interface IXAxisConfig {
+
+    /**
+     * Sets the type of the axis' data.
+     */
+    axisType?: AxisType;
 }
 
 /**
@@ -175,7 +179,7 @@ export interface IPlotConfig {
     /**
      * Configuration for the x axis.
      */
-    x?: IAxisConfig;
+    x?: IXAxisConfig;
 
     /**
      * Configuration for the y axis.
