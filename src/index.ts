@@ -114,6 +114,11 @@ export interface IAxisConfig {
      * Label for the axis.
      */
     label?: IAxisLabelConfig;
+
+    /**
+     * The format for rendering values on the axis.
+     */
+    format?: string;
 }
 
 /**
