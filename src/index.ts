@@ -53,9 +53,24 @@ export enum VerticalLabelPosition {
 }
 
 /**
- * Defines the configuration of an axis label.
+ * Configures the font for a label.
  */
-export interface IAxisLabelConfig {
+export interface IFontConfig {
+    /**
+     * Font size for the series label.
+     */
+    fontSize?: string;
+
+    /**
+     * Font family for the series label.
+     */
+    fontFamily?: string;
+}
+
+/**
+ * Configures the label for a series.
+ */
+export interface ISeriesLabelConfig {
 
     /**
      * The text for the label.
@@ -63,9 +78,19 @@ export interface IAxisLabelConfig {
     text?: string;
 
     /**
-     * Position of the label.
+     * Configures the font for the label.
      */
-    position?: HorizontalLabelPosition | VerticalLabelPosition;
+    font?: IFontConfig;
+}
+
+/**
+ * Configure labels that are applied to each data point.
+ */
+export interface IDataLabels {
+    /**
+     * Configure the font for data labels.
+     */
+    font?: IFontConfig;
 }
 
 /**
@@ -81,7 +106,7 @@ export interface IAxisSeriesConfig {
     /**
      * The label for the series on this axis.
      */
-    label?: string;
+    label?: ISeriesLabelConfig;
 
     /**
      * The format for rendering values of the series.
@@ -103,6 +128,27 @@ export interface IYAxisSeriesConfig extends IAxisSeriesConfig {
      * Configure a separate X axis for the y axis.
      */
     x?: IAxisSeriesConfig;
+}
+
+/**
+ * Defines the configuration of an axis label.
+ */
+export interface IAxisLabelConfig {
+
+    /**
+     * The text for the label.
+     */
+    text?: string;
+
+    /**
+     * Position of the label.
+     */
+    position?: HorizontalLabelPosition | VerticalLabelPosition;
+
+    /**
+     * Configures the font for the label.
+     */
+    font?: IFontConfig;
 }
 
 /**
@@ -200,6 +246,11 @@ export interface IPlotConfig {
      * Configure the chart's legend.
      */
     legend?: ILegendConfig;
+
+    /**
+     * Configure data labels for the whole chart.
+     */
+    dataLabels?: IDataLabels;
 }
 
 /**
