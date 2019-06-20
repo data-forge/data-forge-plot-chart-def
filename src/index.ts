@@ -59,12 +59,12 @@ export interface IFontConfig {
     /**
      * Font size for the series label.
      */
-    fontSize?: string;
+    size?: string;
 
     /**
      * Font family for the series label.
      */
-    fontFamily?: string;
+    family?: string;
 }
 
 /**
@@ -162,7 +162,7 @@ export interface IAxisConfig {
     label?: IAxisLabelConfig;
 
     /**
-     * The format for rendering values on the axis.
+     * The format    for rendering values on the axis.
      */
     format?: string;
 }
