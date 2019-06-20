@@ -106,7 +106,7 @@ export interface IAxisSeriesConfig {
     /**
      * The label for the series on this axis.
      */
-    label?: ISeriesLabelConfig;
+    label?: string;
 
     /**
      * The format for rendering values of the series.
@@ -203,6 +203,11 @@ export interface ILegendConfig {
      * Set to true (default) to show the legend for the chart   .
      */
     show: boolean;
+
+    /**
+     * Configure the font in the legend.
+     */
+    font?: IFontConfig;
 }
 
 /**
