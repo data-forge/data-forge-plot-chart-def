@@ -152,19 +152,34 @@ export interface IAxisLabelConfig {
 }
 
 /**
+ * Configuration for axis tick marks.
+ */
+export interface IAxisTicksConfiguration {
+    /**
+     * Configures the font for tick marks..
+     */
+    font?: IFontConfig;
+}
+
+/**
  * Configures an axis of the chart.
  */
 export interface IAxisConfig {
 
     /**
-     * Label for the axis.
+     * Title for the axis.
      */
     label?: IAxisLabelConfig;
 
     /**
-     * The format    for rendering values on the axis.
+     * Configuration for axis tick marks.
      */
-    format?: string;
+    ticks?: IAxisTicksConfiguration;
+
+    /**
+     * The format for rendering values on the axis.
+     */
+    format?: string; //TODO: This doesn't exist in the DFP version of the chart def.
 }
 
 /**
