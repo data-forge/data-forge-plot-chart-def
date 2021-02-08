@@ -1,3 +1,5 @@
 # data-forge-plot/chart-def
 
-This code library contains the common chart definition for communication between [Data-Forge Plot](https://www.npmjs.com/package/data-forge-plot) and plugin chart templates.
+This library is no longer supported.
+
+Please check out [Plot](https://www.npmjs.com/package/plot) or [Data-Forge Plot](https://www.npmjs.com/package/data-forge-plot).
